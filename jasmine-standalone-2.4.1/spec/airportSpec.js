@@ -1,10 +1,12 @@
+'use strict';
+
 describe('Airport', function(){
   var airport;
   var plane;
 
   beforeEach(function() {
     airport = new Airport();
-    plane = new Plane;
+     plane = jasmine.createSpy('plane');
   });
 
 describe("Lands plane", function() {
@@ -13,6 +15,8 @@ describe("Lands plane", function() {
   });
 });
 });
+
+x =12;
 
 
 // let(:plane) {double(:plane)}
