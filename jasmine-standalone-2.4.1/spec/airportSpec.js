@@ -3,20 +3,20 @@
 describe('Airport', function(){
   var airport;
   var plane;
-
-  beforeEach(function() {
+  beforeEach(function(){
     airport = new Airport();
-     plane = jasmine.createSpy('plane');
+    plane = jasmine.createSpy('plane');
   });
-
-describe("Lands plane", function() {
-  it("lands a plane", function() {
-    expect(airport.land(plane)).toEqual(plane);
+  it('has no planes by default', function(){
+    expect(airport.planes()).toEqual([]);
+  });
+  it('can clear planes for landing', function(){
+    airport.clearForLanding(plane);
+    expect(airport.planes()).toEqual([plane]);
   });
 });
-});
 
-x =12;
+
 
 
 // let(:plane) {double(:plane)}
