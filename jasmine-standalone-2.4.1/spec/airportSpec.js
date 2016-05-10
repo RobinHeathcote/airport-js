@@ -14,37 +14,14 @@ describe('Airport', function(){
     airport.clearForLanding(plane);
     expect(airport.planes()).toEqual([plane]);
   });
+  it('can clear planes for take off', function(){
+    airport.clearForTakeOff(plane);
+    expect(airport.planes()).toEqual([]);
+  });
 });
 
 
 
-
-// let(:plane) {double(:plane)}
-// subject(:airport) { described_class.new }
-
-//   describe 'Normal airport functions' do
-
-  // it 'lands plane' do
-  //     // expect(airport).to receive(:stormy?) {false}
-  //     airport.land(plane)
-  // end
-//
-//     it 'confirm plane has landed' do
-//         allow(airport).to receive(:stormy?) {false}
-//         airport.land(plane)
-//         expect(airport.landed?(plane)).to be true
-//     end
-//
-//     it 'instructs plane to take off' do
-//         airport.planes << plane
-//         expect(airport).to receive(:stormy?) {false}
-//         airport.take_off(plane)
-//     end
-//
-//     it 'checks if plane has departed' do
-//         expect(airport.departed?(plane)).to be true
-//     end
-//   end
 //
 //   describe 'stormy weather' do
 //
